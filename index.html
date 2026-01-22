@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PythonC</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+</head>
+
+<body class="dark">
+
+<header>
+  <div class="logo">🐍 PythonC</div>
+  <div class="actions">
+    <button onclick="toggleTheme()">Theme</button>
+    <button onclick="toggleAI()">🤖 AI</button>
+    <span id="aiStatus">AI Off</span>
+  </div>
+</header>
+
+<div id="tabs">
+  <div class="tab active">Tab 1 <span onclick="closeTab(0)">×</span></div>
+  <button onclick="newTab()">＋</button>
+</div>
+
+<div id="main">
+  <div id="editor"></div>
+
+  <div id="side">
+    <div class="controls">
+      <button onclick="runCode()">▶ Run</button>
+      <button onclick="clearOutput()">🧹 Clear</button>
+      <button onclick="zoomIn()">A+</button>
+      <button onclick="zoomOut()">A−</button>
+      <button onclick="zoomReset()">A0</button>
+    </div>
+
+    <pre id="output"></pre>
+    <textarea id="stdin" placeholder="input()"></textarea>
+  </div>
+</div>
+
+<footer>
+  Copyright © PythonC | Made by Priyanshu
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
